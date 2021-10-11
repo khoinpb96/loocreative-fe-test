@@ -18,6 +18,7 @@ import icon7 from "../assets/image 18.jpg";
 import icon8 from "../assets/image 19.jpg";
 import icon9 from "../assets/image 20.jpg";
 import icon10 from "../assets/image 21.jpg";
+import "../styles/Home.scss";
 
 export default function Home() {
   return (
@@ -80,7 +81,6 @@ export default function Home() {
           </span>
         </Wrapper>
       </section>
-
       <section className="features">
         <div className="row">
           <Wrapper>
@@ -276,7 +276,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <img src={feature8} />
+            <img src={feature8} className="why-us__banner" />
             <div className="col right">
               <div className="item">
                 <img src={icon8} />

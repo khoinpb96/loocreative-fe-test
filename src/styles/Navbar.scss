@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
   }
   a {
     text-decoration: none;
@@ -14,9 +15,9 @@
     font-size: 18.5px;
     font-weight: 800;
     line-height: 1.27;
-    color: #157eff;
+    color: $MAIN_COLOR;
   }
-  ul {
+  &__list {
     display: flex;
     list-style-type: none;
     li {
@@ -39,12 +40,81 @@
       width: 100%;
     }
   }
+
   span {
     font-size: 14px;
     font-weight: 300;
     line-height: 2.14;
     padding: 0 15px;
-    color: #333;
+    color: $BLACK_COLOR;
     cursor: pointer;
+  }
+  &--mobile,
+  &__menu--mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    &__list {
+      display: none;
+    }
+    &__login {
+      display: none;
+    }
+    .logo {
+      height: unset;
+    }
+    &__menu--mobile {
+      display: block;
+      width: 25px;
+      margin: 2rem 0;
+      transition: 0.3s;
+      &:active {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  .navbar--mobile {
+    &.active {
+      transform: translateX(0);
+    }
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background: #fff;
+    padding: 3rem 1rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: 0.5s;
+    .menu-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 1rem;
+      display: block;
+      margin-left: auto;
+      opacity: 0.75;
+      transition: 0.3s;
+      &:active {
+        transform: rotate(90deg);
+      }
+    }
+    &__list {
+      display: flex;
+      flex-direction: column;
+      list-style-type: none;
+      text-align: center;
+      li {
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
+    }
+    &__login {
+      margin-top: 2rem;
+    }
   }
 }
