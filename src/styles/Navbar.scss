@@ -1,0 +1,50 @@
+@import "__typo";
+.navbar {
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  a {
+    text-decoration: none;
+  }
+  .logo {
+    width: 110px;
+    height: 38px;
+    font-size: 18.5px;
+    font-weight: 800;
+    line-height: 1.27;
+    color: #157eff;
+  }
+  ul {
+    display: flex;
+    list-style-type: none;
+    li {
+      position: relative;
+      padding: 45px 0 42px;
+      margin: 0 20px;
+      a {
+        color: $BLACK_COLOR;
+      }
+      .line {
+        position: absolute;
+        height: 3px;
+        width: 0%;
+        background-color: $MAIN_COLOR;
+        transition: 0.3s;
+        bottom: 0;
+      }
+    }
+    li:hover .line {
+      width: 100%;
+    }
+  }
+  span {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 2.14;
+    padding: 0 15px;
+    color: #333;
+    cursor: pointer;
+  }
+}

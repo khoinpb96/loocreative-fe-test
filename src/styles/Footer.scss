@@ -1,0 +1,40 @@
+footer {
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0 80px;
+    ul {
+      display: flex;
+      list-style-type: none;
+      gap: 2rem;
+      li {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.71;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+    & p {
+      max-width: 420px;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.71;
+      color: #a9a9a9;
+    }
+    .contact {
+      margin: 2rem 0;
+    }
+    .social img {
+      margin: 0 0.5rem;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        transform: scale(110%);
+      }
+    }
+  }
+}
